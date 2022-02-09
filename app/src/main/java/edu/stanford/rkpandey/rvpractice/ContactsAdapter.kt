@@ -26,7 +26,6 @@ class ContactsAdapter(val context: Context, val contacts: List<Person>) : Recycl
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvName: TextView = itemView.findViewById(R.id.tvName)
         private val tvAge: TextView = itemView.findViewById(R.id.tvAge)
-        private val ivImgUrl: ImageView = itemView.findViewById(R.id.ivAnimalPic)
         
         fun bind(contact: Person) {
             tvName.text = contact.name

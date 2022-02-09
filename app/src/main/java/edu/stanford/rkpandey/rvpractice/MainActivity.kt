@@ -2,6 +2,7 @@ package edu.stanford.rkpandey.rvpractice
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -24,7 +25,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
+
+
         // 6 STEPS OF IMPLEMENTING RecyclerView, from https://guides.codepath.com/android/using-the-recyclerview
         // 1. Add RecyclerView AndroidX library to the Gradle build file - DONE
         // 2. Define a model class to use as the data source - DONE
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
         //Go to quiz
         if (item.itemId == R.id.miQuiz) {
-            // Navigate to ContactsActivity
+            // Navigate to QuizActivity
             val intent = Intent(this, QuizActivity::class.java)
             startActivityForResult(intent, 42)
             Log.i(TAG2, "Quiz item selected")
@@ -83,4 +85,6 @@ class MainActivity : AppCompatActivity() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+
 }
